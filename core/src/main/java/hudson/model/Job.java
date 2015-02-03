@@ -1453,7 +1453,7 @@ public abstract class Job<JobT extends Job<JobT, RunT>, RunT extends Run<JobT, R
         rsp.sendRedirect2("../" + newName);
     }
 
-    public void doRssAll(StaplerRequest req, StaplerResponse rsp)
+    /*public void doRssAll(StaplerRequest req, StaplerResponse rsp)
             throws IOException, ServletException {
         rss(req, rsp, " all builds", getBuilds());
     }
@@ -1467,7 +1467,7 @@ public abstract class Job<JobT extends Job<JobT, RunT>, RunT extends Run<JobT, R
             RunList runs) throws IOException, ServletException {
         RSS.forwardToRss(getDisplayName() + suffix, getUrl(), runs.newBuilds(),
                 Run.FEED_ADAPTER, req, rsp);
-    }
+    }*/
 
     /**
      * Returns the {@link ACL} for this object.

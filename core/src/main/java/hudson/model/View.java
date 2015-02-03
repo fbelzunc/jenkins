@@ -993,13 +993,13 @@ public abstract class View extends AbstractModelObject implements AccessControll
      */
     public abstract Item doCreateItem( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException;
 
-    public void doRssAll( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
+    /*public void doRssAll( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         rss(req, rsp, " all builds", getBuilds());
     }
 
     public void doRssFailed( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         rss(req, rsp, " failed builds", getBuilds().failureOnly());
-    }
+    }*/
     
     public RunList getBuilds() {
         return new RunList(this);
@@ -1009,7 +1009,7 @@ public abstract class View extends AbstractModelObject implements AccessControll
         return new BuildTimelineWidget(getBuilds());
     }
 
-    private void rss(StaplerRequest req, StaplerResponse rsp, String suffix, RunList runs) throws IOException, ServletException {
+    /*private void rss(StaplerRequest req, StaplerResponse rsp, String suffix, RunList runs) throws IOException, ServletException {
         RSS.forwardToRss(getDisplayName()+ suffix, getUrl(),
             runs.newBuilds(), Run.FEED_ADAPTER, req, rsp );
     }
@@ -1025,7 +1025,7 @@ public abstract class View extends AbstractModelObject implements AccessControll
         }
         RSS.forwardToRss(getDisplayName()+" last builds only", getUrl(),
             lastBuilds, Run.FEED_ADAPTER_LATEST, req, rsp );
-    }
+    }*/
 
     /**
      * Accepts <tt>config.xml</tt> submission, as well as serve it.

@@ -1118,7 +1118,7 @@ public /*transient*/ abstract class Computer extends Actionable implements Acces
 // UI
 //
 //
-    public void doRssAll( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
+    /*public void doRssAll( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         rss(req, rsp, " all builds", getBuilds());
     }
     public void doRssFailed( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
@@ -1127,7 +1127,7 @@ public /*transient*/ abstract class Computer extends Actionable implements Acces
     private void rss(StaplerRequest req, StaplerResponse rsp, String suffix, RunList runs) throws IOException, ServletException {
         RSS.forwardToRss(getDisplayName()+ suffix, getUrl(),
             runs.newBuilds(), Run.FEED_ADAPTER, req, rsp );
-    }
+    }*/
 
     @RequirePOST
     public HttpResponse doToggleOffline(@QueryParameter String offlineMessage) throws IOException, ServletException {

@@ -1956,7 +1956,7 @@ public abstract class AbstractProject<P extends AbstractProject<P,R>,R extends A
     /**
      * RSS feed for changes in this project.
      */
-    public void doRssChangelog(  StaplerRequest req, StaplerResponse rsp  ) throws IOException, ServletException {
+    /*public void doRssChangelog(  StaplerRequest req, StaplerResponse rsp  ) throws IOException, ServletException {
         class FeedItem {
             ChangeLogSet.Entry e;
             int idx;
@@ -2011,7 +2011,7 @@ public abstract class AbstractProject<P extends AbstractProject<P,R>,R extends A
                 }
             },
             req, rsp );
-    }
+    }*/
 
     /**
      * {@link AbstractProject} subtypes should implement this base class as a descriptor.

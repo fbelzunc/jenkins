@@ -24,24 +24,21 @@
 package hudson.logging;
 
 import com.thoughtworks.xstream.XStream;
-import hudson.BulkChange;
-import hudson.Extension;
-import hudson.FilePath;
-import hudson.Util;
-import hudson.XmlFile;
+import hudson.*;
 import hudson.model.*;
-import hudson.util.HttpResponses;
-import jenkins.model.Jenkins;
 import hudson.model.listeners.SaveableListener;
-import hudson.remoting.Callable;
 import hudson.remoting.Channel;
 import hudson.remoting.VirtualChannel;
 import hudson.slaves.ComputerListener;
 import hudson.util.CopyOnWriteList;
+import hudson.util.HttpResponses;
 import hudson.util.RingBufferLogHandler;
 import hudson.util.XStream2;
+import jenkins.model.Jenkins;
 import jenkins.security.MasterToSlaveCallable;
 import net.sf.json.JSONObject;
+import org.kohsuke.accmod.Restricted;
+import org.kohsuke.accmod.restrictions.NoExternalUse;
 import org.kohsuke.stapler.*;
 import org.kohsuke.stapler.interceptor.RequirePOST;
 
@@ -54,8 +51,6 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
-import org.kohsuke.accmod.Restricted;
-import org.kohsuke.accmod.restrictions.NoExternalUse;
 
 /**
  * Records a selected set of logs so that the system administrator
@@ -345,9 +340,9 @@ public class LogRecorder extends AbstractModelObject implements Saveable {
     /**
      * RSS feed for log entries.
      */
-    public void doRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
+    /*public void doRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         LogRecorderManager.doRss(req,rsp,getLogRecords());
-    }
+    }*/
 
     /**
      * The file we save our configuration.

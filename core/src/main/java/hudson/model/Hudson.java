@@ -171,10 +171,10 @@ public class Hudson extends Jenkins {
      * @deprecated
      *   As on 1.267, moved to "/log/rss..."
      */
-    public void doLogRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
+    /*public void doLogRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         String qs = req.getQueryString();
         rsp.sendRedirect2("./log/rss"+(qs==null?"":'?'+qs));
-    }
+    }*/
 
     /**
      * @deprecated as of 1.294

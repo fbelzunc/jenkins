@@ -142,14 +142,14 @@ public class LogRecorderManager extends AbstractModelObject implements ModelObje
     /**
      * RSS feed for log entries.
      */
-    public void doRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
+    /*public void doRss( StaplerRequest req, StaplerResponse rsp ) throws IOException, ServletException {
         doRss(req, rsp, Jenkins.logRecords);
-    }
+    }*/
 
     /**
      * Renders the given log recorders as RSS.
      */
-    /*package*/ static void doRss(StaplerRequest req, StaplerResponse rsp, List<LogRecord> logs) throws IOException, ServletException {
+    /*package*/ /*static void doRss(StaplerRequest req, StaplerResponse rsp, List<LogRecord> logs) throws IOException, ServletException {
         // filter log records based on the log level
         String level = req.getParameter("level");
         if(level!=null) {
@@ -189,7 +189,7 @@ public class LogRecorderManager extends AbstractModelObject implements ModelObje
                 return JenkinsLocationConfiguration.get().getAdminAddress();
             }
         },req,rsp);
-    }
+    }*/
 
     @Initializer(before=PLUGINS_PREPARED)
     public static void init(Jenkins h) throws IOException {
